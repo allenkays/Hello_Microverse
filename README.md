@@ -1,32 +1,5 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<!-- Table of contents -->
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -47,11 +20,8 @@ After you're finished please remove all the comments and instructions!
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 
 # 📖 [Hello Microverse] <a name="about-project"></a>
-
-> Describe your project in 1 or 2 sentences.
 
 **[Hello Microverse]** is a project that focuses on introducing Github flows and linters. This is a guide for the installation and use of linters in html and css
 
@@ -60,34 +30,15 @@ Linters installation and test on html5 and css
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
+  <summary>html</summary>
 </details>
 
 <details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
+  <summary>css</summary>
 </details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
 
 - **[html5 page]**
 - **[css page]**
@@ -95,11 +46,10 @@ Linters installation and test on html5 and css
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+### Prerequisites <a name="prerequisites"><a/>
 
 To get a local copy up and running, follow these steps:
 
@@ -107,22 +57,76 @@ To get a local copy up and running, follow these steps:
 - Create a new branch according to the GitHub flow rules.
 - Add a .gitignore file.
 - Add node_modules to gitignore file.
+
+### Install <a name="install"></a>
+
+Install nodejs via nvm
+
 - Set up a linter for HTML and CSS and make sure that any files that are not relevant are ignored by git.
-- Add descriptive README file to your project - please use this template but remember to customize it to your project.
+Please do the following steps in this order:
+
+    - In the first commit of your feature branch create a .github/workflows folder and add a copy of .github/workflows/linters.yml to that folder.
+        - Remember to use the file linked above
+        - Remember that .github folder starts with a dot.
+    - Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.
+        - If you think that change is necessary - open a Pull Request in this repository and let your code reviewer know about it.
+    - When you open your first pull request you should see the result of the GitHub actions checks:
+
+#### Webhint
+
+A customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors.
+
+NOTE: If you are running on Windows, you need to initialize npm to create package.json file.
+
+\`npm init -y
+
+- Run
+
+\`npm install --save-dev hint@7.x
+
+- Copy .hintrc to the root directory of your project.
+Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.
+
+    - If you think that change is necessary - open a Pull Request in this repository and let your code reviewer know about it.
+
+- Run
+
+\`npx hint .
+
+    Fix validation errors.
+
+#### Stylelint
+A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
+    - Run
+
+    \`npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x\`
+
+- Copy .stylelintrc.json to the root directory of your project.
+
+- Do not make any changes in config files - they represent style guidelines that you share with your team.
+
+    - If you think that change is necessary - open a Pull Request in this repository and let your code reviewer know about it.
+
+\`Run npx stylelint "**/*.{css,scss}" on the root of your directory of your project.\`
+
+- Fix linter errors.
+
+
+### Usage <a name="usage"></a>
 - Add 3 files (each one in a separate commit):
 
 	- A .html file that includes a header with the text "Hello Microverse!". Use h1 tag for that.
 	- A .css file that includes one class with styles for your header (make it in your favorite color).
 	- A test.md file with the text "This file should be ignored by git".
 
-- Make sure that the last file is actually ignored by git and is not present in your GitHub repository.
-Open a pull request.
+### Run tests <a name="run tests"></a>
 
-<!-- AUTHORS -->
+ \`sh -c hint .\`
+ \`npx stylelint "\*\*/\*.{css,scss}"\`
+
 
 ##: 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
 👤 **Author1**
 
@@ -132,17 +136,11 @@ Open a pull request.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
-
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[linters for other stacks]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -152,32 +150,20 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
-
-> Write a message to encourage readers to support your project
 
 If you like this project can give me a star for this repo.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank Ajrass and May for their immense support
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
-
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
